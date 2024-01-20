@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
+import timeReducer from './features/time/timeSlice'
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {},
+    reducer: {
+        time: timeReducer
+    },
   })
 }
 
