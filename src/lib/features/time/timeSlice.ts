@@ -12,6 +12,8 @@ interface timeState {
 interface CounterState {
   // value: Object;
   time: timeState;
+  timeTest: number;
+  timeArr: Array<number>;
 }
 
 
@@ -22,7 +24,9 @@ const initialState: CounterState = {
     currentHr: 0,
     currentMin: 0,
     currentSec: 0,
-  }
+  },
+  timeTest: 0,
+  timeArr: [0, 0, 0],
 }
 
 export const timeSlice = createSlice({
@@ -30,7 +34,7 @@ export const timeSlice = createSlice({
     // `createSlice` will infer the state type from the `initialState` argument
     initialState,
     reducers: {
-
+    
     //   updateDate: (state) => {
     //     state.date = new Date();
     //   },
@@ -39,22 +43,30 @@ export const timeSlice = createSlice({
     //     state.value -= 1
     //   },
 
-    //   calculateTime: (state, action: PayloadAction<timeState>) => {
-    //     state.value += action.payload
-    //   },
+      calculateTime: (state, action: PayloadAction<Array<number>>) => {
+        //state.value += action.payload
+        console.log("check action.payload",action.payload);
+
+        const [h, m, s] = action.payload;
+
+        // Get angles
+        const degHour = h * (360 / 12) + m * (360 / 12 / 60);
+        const degMin = m * (360 / 60) + s * (360 / 60 / 60);
+        const degSec = s * (360 / 60);
+
+        state.timeArr = [degHour, degMin, degSec]
+      },
 
     //   // Use the PayloadAction type to declare the contents of `action.payload`
     //   incrementByAmount: (state, action: PayloadAction<number>) => {
     //     state.value += action.payload
     //   },
-
-
     },
   })
   
-  export const { updateDate } = timeSlice.actions
+  export const { calculateTime } = timeSlice.actions
   
   // Other code such as selectors can use the imported `RootState` type
-  export const selectCount = (state: RootState) => state.time.date
+  export const selectCount = (state: RootState) => state.time.time
   
   export default timeSlice.reducer
