@@ -4,12 +4,12 @@ import MouseTrackerStyles from '@/styles/components/MouseTrackerStyles';
 
 // Define the prop types for the MouseTracker component
 interface MouseTrackerProps {
-  children: ReactNode; // ReactNode allows any valid JSX content
-  offset?: { x: number; y: number }; // Optional offset property with default values
+  children: ReactNode; 
+  offset?: { x: number; y: number };
 }
 
-// Define the MouseTracker functional component with TypeScript types
 const MouseTracker: React.FC<MouseTrackerProps> = ({ children, offset = { x: 0, y: 0 } }) => {
+
   // Create a ref to hold a reference to the tracking element
   const element = useRef<HTMLDivElement>(null);
 
@@ -44,4 +44,4 @@ const MouseTracker: React.FC<MouseTrackerProps> = ({ children, offset = { x: 0, 
   );
 };
 
-export default MouseTracker; // Export the MouseTracker component
+export default MouseTracker;

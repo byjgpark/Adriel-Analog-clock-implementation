@@ -1,13 +1,8 @@
 import styled from "styled-components";
+import BaseStyles from "../global/BaseStyles";
 
-const HrHandStyles = styled.div<{ degree?: number }>`
+const HrHandStyles = styled(BaseStyles)<{ degree: number }>`
   
-  // Seperate this css
-  position: absolute;
-  transform-origin: bottom;
-  border-radius: 40%;
-  // 
-
   width: 16px;
   height: 160px;
   background: #999;

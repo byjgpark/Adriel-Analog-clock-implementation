@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const MouseTrackerStyles = styled.div`
-  color: red; 
+  color: black; 
   position: fixed;
   top: 0;
   left: 0;

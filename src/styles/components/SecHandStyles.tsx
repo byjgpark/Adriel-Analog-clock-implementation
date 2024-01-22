@@ -1,13 +1,8 @@
 import styled from "styled-components";
+import BaseStyles from "../global/BaseStyles";
 
-const SecHandStyles = styled.div<{ degree?: number }>`
+const SecHandStyles = styled(BaseStyles)<{ degree: number }>`
 
-  // Seperate this css
-  position: absolute;
-  transform-origin: bottom;
-  border-radius: 40%;
-  // 
-  
   width: 4px;
   height: 200px;
   background: #0bd;
