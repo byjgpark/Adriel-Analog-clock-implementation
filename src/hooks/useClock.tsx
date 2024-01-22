@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 // Redux
-import { useAppSelector, useAppDispatch, useAppStore } from "@/redux/hooks";
+import { useAppSelector, useAppDispatch} from "@/redux/hooks";
 import { calculateTime } from "@/redux/slices/timeSlice";
 
 export const useClock = () => {
