@@ -7,7 +7,7 @@ import { calculateTime } from "@/redux/slices/timeSlice";
 
 export const useClock = () => {
 
-   // Hook
+  // Hook
   const [date, setDate] = useState<Date>(new Date());
   const [target, setTarget] = useState<String>("");
 

@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
 ### Project Timeline
-Jan.18.2024 ~ Jan.24.2024
+Jan.18.2024 ~ Jan.23.2024
 
 
 
