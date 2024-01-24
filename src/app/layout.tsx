@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Analog clock",
   description: "Real Time Analog Clock",
+  icons: {
+    icon: "/src/app/favicon.ico"
+  }
 };
 
 export default function RootLayout({
@@ -19,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <link rel="icon" href="/src/app/favicon.ico" sizes="any" />
         <StoreProvider>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </StoreProvider>

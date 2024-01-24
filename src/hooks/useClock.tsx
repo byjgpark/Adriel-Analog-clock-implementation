@@ -5,11 +5,20 @@ import { useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch} from "@/redux/hooks";
 import { calculateTime } from "@/redux/slices/timeSlice";
 
-export const useClock = () => {
+interface ClockHookReturnType {
+  target: string;
+  degHour: number;
+  degMin: number;
+  degSec: number;
+  handleOnMouseEnter: () => void;
+  handleOnMouseLeave: () => void;
+}
+
+export const useClock = (): ClockHookReturnType => {
 
   // Hook
   const [date, setDate] = useState<Date>(new Date());
-  const [target, setTarget] = useState<String>("");
+  const [target, setTarget] = useState<string>("");
 
   // Redux
   const timeArrSelector = useAppSelector((state) => state.time.timeArr);

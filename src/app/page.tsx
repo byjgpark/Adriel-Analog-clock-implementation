@@ -9,7 +9,7 @@ import SecHandStyles from "@/styles/components/SecHandStyles";
 import MouseTracker from "@/components/MouseTracker";
 import useClock from "@/hooks/useClock";
 
-export default function Home() {
+export default function Home(): JSX.Element {
 
   // Extracting the hooks from the useClock
   const {target,degHour,degMin,degSec,handleOnMouseEnter,handleOnMouseLeave} = useClock();

@@ -2,7 +2,6 @@
 import { useRef } from 'react'
 import { Provider } from 'react-redux'
 import { makeStore, AppStore } from './store'
-//import { selectCount } from '@/lib/features/time/timeSlice'
 
 export default function StoreProvider({
   children,
